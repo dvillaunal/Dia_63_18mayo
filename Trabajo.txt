@@ -1,4 +1,4 @@
-"x"
+"Gano.el.trabajo"
 " El Estudiante:  Lisandra  ,Gano el trabajo?:  FALSE"
 " El Estudiante:  Regan  ,Gano el trabajo?:  TRUE"
 " El Estudiante:  Michael  ,Gano el trabajo?:  FALSE"
