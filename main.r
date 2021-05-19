@@ -1,24 +1,17 @@
-```{r, eval=FALSE, include=FALSE}
-"Protocolo:
-
- 1. Daniel Felipe Villa Rengifo
-
- 2. Lenguaje: R
-
- 3. Tema: Cree funciones CON argumentos en R con cadenas de texto y con valores numéricos  (realice al menos dos ejercicios que requieran cargar archivos externos *.csv cada uno con al menos 50 filas y tres datos por fila, lea y procese la información del archvo leído, y guarde las respuestas a los ejercicios  en archivos independientes tipo *.txt)
-
- 4. Fuentes:
-    https://www.generatedata.com"
-```
-
-# Ejercicio 1:
-
-Según la base de datos de un profesor, que dicta cuatro materias de la escuela de matematicas (es decir, la nota de la materia, depende de tres parciales)
-
-nos pidio calcular la nota de un trabajo en grupo de cada estudiantes, y después en otro archivo una ponderada de los grupos, discriminada por Creditos, es decir, Materia 1° = Un Credito, Materia 4° = 4 Creditos...
+## ---- eval=FALSE, include=FALSE---------------------------------------
+## "Protocolo:
+## 
+##  1. Daniel Felipe Villa Rengifo
+## 
+##  2. Lenguaje: R
+## 
+##  3. Tema: Cree funciones CON argumentos en R con cadenas de texto y con valores numéricos  (realice al menos dos ejercicios que requieran cargar archivos externos *.csv cada uno con al menos 50 filas y tres datos por fila, lea y procese la información del archvo leído, y guarde las respuestas a los ejercicios  en archivos independientes tipo *.txt)
+## 
+##  4. Fuentes:
+##     https://www.generatedata.com"
 
 
-```{r}
+## ---------------------------------------------------------------------
 options(scipen=999)
 # Importamos la base de datos:
 base1 <- read.csv(file = "Base1.csv", sep = ",", dec = ".", header = T)
@@ -70,15 +63,9 @@ Notafinal <- data.frame(base1$Nota1, base1$Nota2, base1$Nota3, base1$Definitiva)
 
 write.csv(Notafinal, file = "Notafinal.csv", row.names = F)
 write.table(easy, file = "Trabajo.txt", row.names = F)
-```
 
-# Ejercicio 2:
 
-Una base de datos de un aeropuerto necesita saber los precios de los vuelos según la empresa avidora, si lleva mascota y su carga (despreciando las dimensiones solomente el peso)
-
-+ `Carga` = Peso de equipaje extra
-
-```{r}
+## ---------------------------------------------------------------------
 # Importamos la base de datos:
 base2 <- read.csv(file = "Base2.csv", header = T, sep = ",", dec = ".")
 
@@ -162,4 +149,4 @@ new_txt <- data.frame("El vuelo del Aeropuerto es: "= new_txt)
 ## Exportemos:
 write.table(new_txt, file = "Resultado2.txt", row.names = F)
 
-```
+
